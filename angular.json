@@ -20,16 +20,26 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
+
+            "assets": [                  
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public"                           
+              },
+              "src/assets"
+
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/popper.js/dist/umd/popper.min.js",               
+              "node_modules/jquery/dist/jquery.slim.min.js",               
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -77,12 +87,14 @@
               "zone.js",
               "zone.js/testing"
             ],
+            
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
+            "assets": [ 
               {
-                "glob": "**/*",
-                "input": "public"
-              }
+                "glob": "**/*",            
+                "input": "public"                
+              },
+                "src/assets"
             ],
             "styles": [
               "src/styles.css"
